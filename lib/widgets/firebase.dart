@@ -73,6 +73,7 @@ class _FirebaseScreenState extends State<FirebaseScreen> {
                   .toList();
 
               return ListView.builder(
+                itemCount: addresses.length,
                 itemBuilder: (context, index) => ListTile(
                   leading: CircleAvatar(
                       child: Text((addresses.length - index).toString())),
@@ -81,14 +82,15 @@ class _FirebaseScreenState extends State<FirebaseScreen> {
                     {
                       var googleGeocoding = GoogleGeocoding(
                           "AIzaSyC1VRXx_dWi58eIf-lWpIwtA5ClJYlAoDw");
-                      var risult = await googleGeocoding.geocoding
+                      var result = await googleGeocoding.geocoding
                           .get(data[index]["exporterAddress"], []);
 
-                      print(risult!.results![0].geometry!.location!.lng);
+                      // print(result!.results![0].geometry!.location!.lng);
+                      print(addresses);
                       // setState(() {
                       latLng = LatLng(
-                        risult.results![0].geometry!.location!.lat!,
-                        risult.results![0].geometry!.location!.lng!,
+                        result!.results![0].geometry!.location!.lat!,
+                        result.results![0].geometry!.location!.lng!,
                       );
                       // });
                       Navigator.of(context).push(MaterialPageRoute(
@@ -101,7 +103,6 @@ class _FirebaseScreenState extends State<FirebaseScreen> {
                     }
                   },
                 ),
-                itemCount: data.length,
               );
               return Center(
                 child: ElevatedButton(
@@ -109,14 +110,14 @@ class _FirebaseScreenState extends State<FirebaseScreen> {
                   onPressed: () async {
                     var googleGeocoding = GoogleGeocoding(
                         "AIzaSyC1VRXx_dWi58eIf-lWpIwtA5ClJYlAoDw");
-                    var risult = await googleGeocoding.geocoding.get(
+                    var result = await googleGeocoding.geocoding.get(
                         "Mühlweg 3a, 67105 Schifferstadt, Deutschland", []);
 
-                    print(risult!.results![0].geometry!.location!.lng);
+                    print(result!.results![0].geometry!.location!.lng);
                     // setState(() {
                     latLng = LatLng(
-                      risult.results![0].geometry!.location!.lat!,
-                      risult.results![0].geometry!.location!.lng!,
+                      result.results![0].geometry!.location!.lat!,
+                      result.results![0].geometry!.location!.lng!,
                     );
                     // });
                     Navigator.of(context).push(MaterialPageRoute(
