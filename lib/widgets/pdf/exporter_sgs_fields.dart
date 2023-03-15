@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:autocomplete_textfield/autocomplete_textfield.dart';
-import 'package:autocomplete_textfield_ns/autocomplete_textfield_ns.dart';
+import 'package:autocomplete_textfield/autocomplete_textfield.dart';
 
 class ExporterSgsFields extends StatefulWidget {
   final TextEditingController controller;

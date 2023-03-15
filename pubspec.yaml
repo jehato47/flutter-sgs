@@ -39,7 +39,7 @@ dependencies:
   file_picker: ^5.2.5
   image_picker: ^0.8.4+11
   syncfusion_flutter_pdfviewer: ^19.4.48-beta
-  autocomplete_textfield_ns: ^2.0.0
+  autocomplete_textfield: ^2.0.1
   font_awesome_flutter: ^9.2.0
   flutter_signin_button: ^2.0.0
   cupertino_icons: ^1.0.2

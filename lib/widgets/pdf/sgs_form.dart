@@ -1,7 +1,7 @@
 // import 'package:autocomplete_textfield/autocomplete_textfield.dart';
 import 'dart:io';
 
-import 'package:autocomplete_textfield_ns/autocomplete_textfield_ns.dart';
+import 'package:autocomplete_textfield/autocomplete_textfield.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
